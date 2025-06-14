@@ -178,7 +178,7 @@
             "layout_block": "custom_width",
             "header_custom_width_size": 1200,
             "item": "WOMENS",
-            "column": 1,
+            "column": 2,
             "show_banner_1": true,
             "banner_1": "shopify://shop_images/womens-fashion.jpg",
             "banner_url_1": "shopify://collections/womens-basics",
