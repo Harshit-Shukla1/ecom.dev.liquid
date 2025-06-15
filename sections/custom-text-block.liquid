@@ -166,6 +166,7 @@
        {% endif %}
     }
 
+    /* Mobile horizontal scroll styles */
     @media (max-width: 767px) {
         .section-block-{{section.id}} {
             padding-top: {{ mg_top_mobile | append: 'px' }};
@@ -177,6 +178,72 @@
             {%- if fontsize_title_mb > headingLineHeight -%}
                 line-height: {{ fontsize_title_mb | append: 'px' }};
             {%- endif -%}
+        }
+
+        /* Enable horizontal scrolling on mobile */
+        .section-block-{{section.id}} .block__custom--text {
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE and Edge */
+            padding-bottom: 10px;
+        }
+
+        /* Hide scrollbar for webkit browsers */
+        .section-block-{{section.id}} .block__custom--text::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Prevent text items from shrinking */
+        .section-block-{{section.id}} .wrapper-text {
+            flex-shrink: 0;
+            margin: 0 {{ grid_gap | times: 0.25 | append: 'px' }} {{ grid_gap | append: 'px' }};
+        }
+
+        /* First and last item padding for better spacing */
+        .section-block-{{section.id}} .wrapper-text:first-child {
+            margin-left: {{ grid_gap | times: 0.5 | append: 'px' }};
+        }
+
+        .section-block-{{section.id}} .wrapper-text:last-child {
+            margin-right: {{ grid_gap | times: 0.5 | append: 'px' }};
+        }
+
+        /* Ensure links maintain their size */
+        .section-block-{{section.id}} .block__custom--text a {
+            white-space: nowrap;
+            min-width: fit-content;
+        }
+
+        /* Optional: Add scroll indicators */
+        .section-block-{{section.id}} .block__custom--text::before,
+        .section-block-{{section.id}} .block__custom--text::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 10px;
+            width: 20px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .section-block-{{section.id}} .block__custom--text::before {
+            left: 0;
+            background: linear-gradient(to right, rgba(255,255,255,0.8), transparent);
+        }
+
+        .section-block-{{section.id}} .block__custom--text::after {
+            right: 0;
+            background: linear-gradient(to left, rgba(255,255,255,0.8), transparent);
+        }
+
+        /* Position relative for pseudo-elements */
+        .section-block-{{section.id}} .custom-text--block > div {
+            position: relative;
         }
     }
 </style>
