@@ -304,6 +304,19 @@
                 padding-bottom: {{ mg_bottom_desktop | append: 'px' }};
             }
         }
+  
+        /* Adjust swatch size within related products product cards */
+        .section-block-{{ section.id }} {
+            --w-product-swatch-custom: 30px;
+            --h-product-swatch-custom: 30px;
+        }
+
+        @media (max-width: 767px) {
+            .section-block-{{ section.id }} {
+                --w-product-swatch-custom-mb: 20px;
+                --h-product-swatch-custom-mb: 20px;
+            }
+        }
     </style>
     <{% if swipe %}product-slider-component{% else %}div{% endif %} class="halo-block halo-product-block halo-recommendations-block section-block-{{section.id}}{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}" id="halo-recommendations-block-{{ section.id }}" data-limit="{{ limit }}" data-layout="{{ layout }}" sectionId="{{ section.id }}" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ limit }}" data-image-ratio="{{ image_ratio }}" data-swipe="{{ swipe }}" data-recommendations-block style="--grid-gap: {{ grid_gap }}">
         {% if recommendations.performed and recommendations.products_count > 0 %}
