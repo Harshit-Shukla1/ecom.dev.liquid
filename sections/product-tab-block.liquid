@@ -353,6 +353,17 @@
             }
         {%- endif -%}
     {%- endif -%}
+    /* Adjust swatch size within product tabs product cards */
+    .section-block-{{ section.id }} {
+        --w-product-swatch-custom: 30px;
+        --h-product-swatch-custom: 30px;
+    }
+    @media (max-width: 767px) {
+        .section-block-{{ section.id }} {
+            --w-product-swatch-custom-mb: 20px;
+            --h-product-swatch-custom-mb: 20px;
+        }
+    }
 </style>
 <product-tabs-section>
     <div class="product-tab-block product-block section-block-{{section.id}}{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}" {% if block_banners.size > 1  %}data-loader-script="{{ 'halo.product-tab-banner.js' | asset_url }}"{% endif %}>
