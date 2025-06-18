@@ -307,6 +307,19 @@
                 padding-bottom: {{ mg_bottom_desktop | append: 'px' }};
             }
         }
+  
+        /* Adjust swatch size within recently viewed product cards */
+        .section-block-{{ section.id }} {
+            --w-product-swatch-custom: 30px;
+            --h-product-swatch-custom: 30px;
+        }
+
+        @media (max-width: 767px) {
+            .section-block-{{ section.id }} {
+                --w-product-swatch-custom-mb: 20px;
+                --h-product-swatch-custom-mb: 20px;
+            }
+        }
     </style>
     <{% if swipe %}product-slider-component{% else %}div{% endif %} class="halo-block halo-product-block halo-recently-viewed-block section-block-{{section.id}}{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}" id="halo-recently-viewed-block-{{ section.id }}" data-recently-viewed-block data-limit="{{ limit }}" data-layout="{{ layout }}" sectionId="{{ section.id }}" data-image-ratio="{{ image_ratio }}" data-swipe="{{ swipe }}" style="--grid-gap: {{ grid_gap }}">
         <{% if layout == 'scroll' %}product-scroller{% else %}div{% endif %} class="{% if container == '1170' %}container-1170{% elsif container == '1770' %}container-1770{% elsif container == 'fullwidth'%}container-full{% else %}container{% endif %}">
