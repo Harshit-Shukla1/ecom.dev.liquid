@@ -206,7 +206,7 @@
     "new_badge_limit": 100,
     "sale_badge_type": "text",
     "show_swatch": true,
-    "point_product_swatch_custom": "50px",
+    "point_product_swatch_custom": "30px",
     "product_swatch_more_font_size": 20,
     "show_action": false,
     "show_quick_shop": true,
