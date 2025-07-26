@@ -238,6 +238,10 @@
                 this.gridViewContainer.appendChild(productHTML);
                 productHTML.dataset.productHandle = handle;
 
+                if (typeof halo !== 'undefined' && halo.initColorSwatch) {
+                    halo.initColorSwatch();
+                }
+
                 const item = this.wishlistContainer.querySelector(`[data-wishlist][data-wishlist-handle="${handle}"]`);
 
                 if (item != null) {

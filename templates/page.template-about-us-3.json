@@ -80,6 +80,7 @@
         }
       },
       "block_order": ["text_RBnrmV", "164731865614d84454-0"],
+      "disabled": true,
       "settings": {
         "container": "container",
         "padding_full_width": 0,
@@ -184,6 +185,7 @@
         }
       },
       "block_order": ["13ed6053-c1f6-4137-8015-8351a57b6514"],
+      "disabled": true,
       "settings": {
         "id_section": "",
         "container": "1170",
@@ -223,7 +225,7 @@
           "settings": {
             "row_reverse": true,
             "image_width": "50",
-            "image": "shopify://shop_images/temp20250719-20867-1u9ungz.png",
+            "image": "shopify://shop_images/temp20250719-20615-1sr0bng.png",
             "flying_effect": false,
             "small_img_block_style": "style_3",
             "enable_divider": true,
@@ -246,7 +248,7 @@
             "font_weight_sub_title": "700",
             "sub_title_position": "sub_title_above",
             "color_sub_title": "#232323",
-            "heading": "Store Level",
+            "heading": "About Us",
             "letter_spacing_heading": "",
             "font_size_heading": 24,
             "font_size_heading_mb": 24,
@@ -254,7 +256,7 @@
             "margin_bottom_heading_mb": 15,
             "font_weight_heading": "600",
             "color_heading": "#232323",
-            "text": "<p>A key value for us is to approach our store ﬁt-outs in an ecologically sustainable way. We are committed to leading by example & having a positive impact within the retail sector. It is the focus of our designers to produce sustainable ﬁt-out solutions & minimise our impact on the environment.</p>\n<p>\nOur shop ﬁt-outs, ﬁxtures & ﬁttings are all</p>\n<p><strong>\ncreated by our team here in India.</strong></p>\n<p><strong>\n85%\n</strong></p>\n<p>\nof plastic hangers end up in landfill. That’s why we use timber hangers in all of our stores.\n</p>\n<p>\nWe’ve removed the use of individual poly bags on all of our blank garments. In doing so, we have reduced our plastic consumption by\n</p>\n<p><strong>\n60%\n</strong></p>",
+            "text": "<p>Ghanda is a surf & street wear brand born out of the coastal town of Torquay, Victoria.</p>\n<p>\nWe’re a small brand with a select number of stores around Australia, focusing on offering affordable basics and fashion pieces catering to all ages across Men’s, Women’s, Teens and Kids.</p>\n<p><Ghanda is famous for its hand-printed fleece Trackies (available in a range of styles including Original, Tracksides, Track & Fields and Sport & Skinny Joggers) and fleece Hoodies & Crews. Our extensive selection of T-Shirts are some of our best-sellers which display the work of our incredibly talented in-house designers.</p>\n<p>Shop from our range of styles including Dresses & Playsuits, Skirts, Shorts, Jackets and Knits. Finish off your look with our Women’s and Men’s accessories (think Headwear such as Hats, Beanies & Hair Clips, Sunglasses and Belts) and selection of Footwear. Our online & store Gift Cards make a great gift idea!</p>\n<p>\nThe majority of the styles you see in our stores and online are hand-printed by our own team of in-house printers. The flexibility of having access to printing ourselves, instead of outsourcing to manufacturers overseas, allows us to print to order. Our range is directed by what you want, and therefore we don’t overproduce styles that won’t sell. We strive to be a sustainable brand where wastage is limited.\n</p>\n<p>\nFollow and tag us @ghandaclothing.\n</p>",
             "font_size_des": 12,
             "font_size_des_mb": 12,
             "line_height_des": 24,
@@ -414,6 +416,7 @@
         }
       },
       "block_order": ["22b86d0a-5cd4-489f-8b7e-eeebc28d9cb9"],
+      "disabled": true,
       "settings": {
         "id_section": "",
         "container": "1170",

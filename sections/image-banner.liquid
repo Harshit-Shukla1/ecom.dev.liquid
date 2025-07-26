@@ -60,6 +60,7 @@
         #halo-image-banner-{{ section.id }} .flex-box__banner .sub-title-icon img {margin-right: auto;margin-left: auto;margin-bottom: var(--mg-bottom-icon-style)}
         #halo-image-banner-{{ section.id }} .banner-item.slick-initialized {z-index: 2}
         #halo-image-banner-{{ section.id }} .banner-item--maxWidth{max-width: var(--custom_width_image); margin: 0 auto}
+        @media (max-width: 767px){#halo-image-banner-{{ section.id }} .banner-item--maxWidth{max-width: 100%}}
         #halo-image-banner-{{ section.id }} .banner-button--custom-border{overflow: unset; transform: none !important}
         #halo-image-banner-{{ section.id }} .banner-button--custom-border:after{content: "";position: absolute;top: 6px;left: 6px;width: 100%;height: 100%;border: 1px solid var(--button_border);z-index: -1}
         #halo-image-banner-{{ section.id }} .banner-button:hover:after{border: 1px solid var(--button_border_hover)}
@@ -525,14 +526,14 @@
                                                 </a>
                                             {%- endif -%}
                                             {%- if mobile_image != blank -%}
-                                                <a class="image image-mobile image-adapt adaptive_height{% if enable_custom_image %} enable_custom_image{% endif %}"{% if link == blank %} role="link" aria-disabled="true"{% else %} href="{{ link }}"{% endif %} {% if link == blank %} role="link" aria-disabled="true"{% else %} href="{{ link }}"{% endif %} style="padding-top: {% unless mobile_image.presentation.focal_point == '50.0% 50.0%' %}{{ 1 | divided_by: mobile_image.aspect_ratio | times: 120 | append: '%' }}{% else %}{{ 1 | divided_by: mobile_image.aspect_ratio | times: 100 | append: '%' }}{% endunless %}" title="{{ mobile_image.alt | default: shop.name | escape }}">
+                                                <a class="image image-mobile image-adapt adaptive_height{% if enable_custom_image %} enable_custom_image{% endif %}"{% if link == blank %} role="link" aria-disabled="true"{% else %} href="{{ link }}"{% endif %} {% if link == blank %} role="link" aria-disabled="true"{% else %} href="{{ link }}"{% endif %} style="padding-top: {% unless mobile_image.presentation.focal_point == '50.0% 50.0%' %}{{ 1 | divided_by: mobile_image.aspect_ratio | times: 150 | append: '%' }}{% else %}{{ 1 | divided_by: mobile_image.aspect_ratio | times: 100 | append: '%' }}{% endunless %}" title="{{ mobile_image.alt | default: shop.name | escape }}">
                                                     {%- assign height_mb = mobile_image.width | divided_by: mobile_image.aspect_ratio | round -%}
                                                     {{ mobile_image | image_url: width: 750 | image_tag: loading: 'lazy',class: lazy, height: height_mb, sizes: "100vw", widths: '375, 550, 750'}}
                                                     {%- if settings.enable_lazyload -%}<span class="data-lazy-loading"></span>{%- endif -%}
                                                 </a>
                                             {%- else -%}
                                                 {%- if image != blank -%}
-                                                    <a class="image image-mobile image-adapt adaptive_height{% if enable_custom_image %} enable_custom_image{% endif %}"{% if link == blank %} role="link" aria-disabled="true"{% else %} href="{{ link }}"{% endif %} style="padding-top: {% unless image.presentation.focal_point == '50.0% 50.0%' %}{{ 1 | divided_by: image.aspect_ratio | times: 200 | append: '%' }}{% else %}{{ 1 | divided_by: image.aspect_ratio | times: 100 | append: '%' }}{% endunless %}" title="{{ image.alt | default: shop.name | escape }}">
+                                                    <a class="image image-mobile image-adapt adaptive_height{% if enable_custom_image %} enable_custom_image{% endif %}"{% if link == blank %} role="link" aria-disabled="true"{% else %} href="{{ link }}"{% endif %} style="padding-top: {% unless image.presentation.focal_point == '50.0% 50.0%' %}{{ 1 | divided_by: image.aspect_ratio | times: 230 | append: '%' }}{% else %}{{ 1 | divided_by: image.aspect_ratio | times: 100 | append: '%' }}{% endunless %}" title="{{ image.alt | default: shop.name | escape }}">
                                                     {%- assign height_mb = image.width | divided_by: image.aspect_ratio | round -%}
                                                     {{ image | image_url: width: 750 | image_tag: loading: 'lazy', class: lazy, height: height_mb, sizes: "100vw", widths: '375, 550, 750' }}
                                                     {%- if settings.enable_lazyload -%}<span class="data-lazy-loading"></span>{%- endif -%}
@@ -622,7 +623,7 @@
                                         {%- if enable_custom_image -%}
                                             <div class="content-custom-image content-box--absolute">
                                                 {%- if image_custom != blank -%}
-                                                    <a class="image image-custom image-adapt{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--fade-in{% endif %}"{% if link == blank %} role="link" aria-disabled="true"{% else %} href="{{ link }}"{% endif %} style="padding-top: {% unless image_custom.presentation.focal_point == '50.0% 50.0%' %}{{ 1 | divided_by: image_custom.aspect_ratio | times: 200 | append: '%' }}{% else %}{{ 1 | divided_by: image_custom.aspect_ratio | times: 100 | append: '%' }}{% endunless %}" title="{{ image.alt | default: shop.name | escape }}">
+                                                    <a class="image image-custom image-adapt{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--fade-in{% endif %}"{% if link == blank %} role="link" aria-disabled="true"{% else %} href="{{ link }}"{% endif %} style="padding-top: {% unless image_custom.presentation.focal_point == '50.0% 50.0%' %}{{ 1 | divided_by: image_custom.aspect_ratio | times: 230 | append: '%' }}{% else %}{{ 1 | divided_by: image_custom.aspect_ratio | times: 100 | append: '%' }}{% endunless %}" title="{{ image.alt | default: shop.name | escape }}">
                                                     {%- assign preview_img = block.settings.image_custom -%}
                                                     <img width="100%" height="100%" {% render 'lazyload',preview_img: preview_img %} />
                                                     {%- if settings.enable_lazyload -%}<span class="data-lazy-loading"></span>{%- endif -%}
